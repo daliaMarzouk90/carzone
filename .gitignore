@@ -5,3 +5,6 @@
 /.vs
 /carzone/__pycache__
 /pages/__pycache__
+pages/migrations/__pycache__/__init__.cpython-310.pyc
+static/admin/js/vendor/xregexp/xregexp.js
+carzone/static/js/*

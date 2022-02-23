@@ -25,7 +25,7 @@
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'css/style.csscss/skins/red.css'%}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'css/skins/red.css'%}">
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="" type="{% static 'img/favicon.ico'%}" >
@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css'%}">
 
-    <script  src="js/ie-emulation-modes-warning.js"></script>
+    <script  src="{ % static 'js/ie-emulation-modes-warning.js' %}"></script>
 </head>
 <body>
 <div class="page_loader"></div>
