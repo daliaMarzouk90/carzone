@@ -8,18 +8,18 @@
     <meta charset="utf-8">
 
     <!-- External CSS libraries -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-submenu.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-submenu/3.0.1/css/bootstrap-submenu.min.css" integrity="sha512-kGEAYhZg8XIg5nSoPJua2FVPyN7aRrlxFvGw6Yi4W+GsrmrHbwL9SYV0X7AI1NPZux2wB4/95kTRnw5Ax6Ss7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-select.min.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.min.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/flaticon/font/flaticon.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons/style.css'%}">
     <link rel="stylesheet" type="text/css"  href="{% static 'css/jquery.mCustomScrollbar.css'%}">
     <link rel="stylesheet" type="text/css"  href="{% static 'css/dropzone.css'%}">
-    <link rel="stylesheet" type="text/css"  href="{% static 'css/slick.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css"  href="{% static 'css/lightbox.min.css'%}">
     <link rel="stylesheet" type="text/css"  href="{% static 'css/jnoty.css'%}">
 
@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css'%}">
 
-    <script  src="{ % static 'js/ie-emulation-modes-warning.js' %}"></script>
+    <script  src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
 </head>
 <body>
 <div class="page_loader"></div>
@@ -54,20 +54,20 @@
 
 {% include 'includes/footer.html' %}
 
-<script src="{% static 'js/jquery-2.2.0.min.js'%}"></script>
-<script src="{% static 'js/popper.min.js'%}"></script>
-<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script  src="{% static 'js/bootstrap-submenu.js'%}"></script>
 <script  src="{% static 'js/rangeslider.js'%}"></script>
 <script  src="{% static 'js/jquery.mb.YTPlayer.js'%}"></script>
-<script  src="{% static 'js/bootstrap-select.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js" integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script  src="{% static 'js/jquery.easing.1.3.js'%}"></script>
-<script  src="{% static 'js/jquery.scrollUp.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollup/2.4.1/jquery.scrollUp.min.js" integrity="sha512-gAHP1RIzRzolApS3+PI5UkCtoeBpdxBAtxEPsyqvsPN950Q7oD+UT2hafrcFoF04oshCGLqcSgR5dhUthCcjdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script  src="{% static 'js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
 <script  src="{% static 'js/dropzone.js'%}"></script>
-<script  src="{% static 'js/slick.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
 <script  src="{% static 'js/jquery.filterizr.js'%}"></script>
-<script  src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script  src="{% static 'js/jquery.countdown.js'%}"></script>
 <script  src="{% static 'js/jquery.mousewheel.min.js'%}"></script>
 <script  src="{% static 'js/lightgallery-all.js'%}"></script>

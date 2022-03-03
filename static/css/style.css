@@ -3274,7 +3274,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .team-1 .photo img{
-    width: 100%;
+    width: 50%;
 }
 
 .team-1 .social-list {

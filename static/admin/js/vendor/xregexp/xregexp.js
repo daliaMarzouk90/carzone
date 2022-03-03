@@ -251,7 +251,7 @@ module.exports = function(XRegExp) {
      *
      * // Omitting unneeded parts with null valueNames, and using escapeChar
      * str = '...{1}.\\{{function(x,y){return {y:x}}}';
-     * XRegExp.matchRecursive(str, '{', '}', 'g', {
+     * XRegExp.matchRecursive(str, '{', '%}', 'g', {
      *   valueNames: ['literal', null, 'value', null],
      *   escapeChar: '\\'
      * });
@@ -305,7 +305,7 @@ module.exports = function(XRegExp) {
                     // Intentionally not passing `basicFlags` to `XRegExp.union` since any syntax
                     // transformation resulting from those flags was already applied to `left` and
                     // `right` when they were passed through the XRegExp constructor above.
-                    XRegExp.union([left, right], '', {conjunction: 'or'}).source +
+                    XRegExp.union([left, right], '', {conjunction: 'or'%}).source +
                     ')[^' + escapeChar + '])+)+',
                 // Flags `gy` not needed here
                 flags.replace(/[^imu]+/g, '')
@@ -3442,7 +3442,7 @@ XRegExp._pad4 = pad4;
  * XRegExp.addToken(
  *   /\\a/,
  *   function() {return '\\x07';},
- *   {scope: 'all'}
+ *   {scope: 'all'%}
  * );
  * XRegExp('\\a[\\a-\\n]+').test('\x07\n\x07'); // -> true
  *
@@ -3452,7 +3452,7 @@ XRegExp._pad4 = pad4;
  * XRegExp.addToken(
  *   /([?*+]|{\d+(?:,\d*)?})(\??)/,
  *   function(match) {return match[1] + (match[2] ? '' : '?');},
- *   {flag: 'U'}
+ *   {flag: 'U'%}
  * );
  * XRegExp('a+', 'U').exec('aaa')[0]; // -> 'a'
  * XRegExp('a+?', 'U').exec('aaa')[0]; // -> 'aaa'
@@ -3828,7 +3828,7 @@ XRegExp.match = function(str, regex, scope) {
  *         <a href="http://www.google.com/">Google</a>';
  * XRegExp.matchChain(html, [
  *   {regex: /<a href="([^"]+)">/i, backref: 1},
- *   {regex: XRegExp('(?i)^https?://(?<domain>[^/?#]+)'), backref: 'domain'}
+ *   {regex: XRegExp('(?i)^https?://(?<domain>[^/?#]+)'), backref: 'domain'%}
  * ]);
  * // -> ['xregexp.com', 'www.google.com']
  */
@@ -4089,7 +4089,7 @@ XRegExp.uninstall = function(options) {
  * XRegExp.union(['a+b*c', /(dogs)\1/, /(cats)\1/], 'i');
  * // -> /a\+b\*c|(dogs)\1|(cats)\2/i
  *
- * XRegExp.union([/man/, /bear/, /pig/], 'i', {conjunction: 'none'});
+ * XRegExp.union([/man/, /bear/, /pig/], 'i', {conjunction: 'none'%});
  * // -> /manbearpig/i
  */
 XRegExp.union = function(patterns, flags, options) {
@@ -4513,7 +4513,7 @@ XRegExp.addToken(
         // (?!) should work like \b\B, but is unreliable in some versions of Firefox
         return match[1] ? '[\\s\\S]' : '\\b\\B';
     },
-    {leadChar: '['}
+    {leadChar: '['%}
 );
 
 /*
@@ -4523,7 +4523,7 @@ XRegExp.addToken(
 XRegExp.addToken(
     /\(\?#[^)]*\)/,
     getContextualTokenSeparator,
-    {leadChar: '('}
+    {leadChar: '('%}
 );
 
 /*
@@ -4532,7 +4532,7 @@ XRegExp.addToken(
 XRegExp.addToken(
     /\s+|#[^\n]*\n?/,
     getContextualTokenSeparator,
-    {flag: 'x'}
+    {flag: 'x'%}
 );
 
 /*
@@ -4569,7 +4569,7 @@ XRegExp.addToken(
                 '' : '(?:)'
         );
     },
-    {leadChar: '\\'}
+    {leadChar: '\\'%}
 );
 
 /*
@@ -4624,7 +4624,7 @@ XRegExp.addToken(
         this.hasNamedCapture = true;
         return '(';
     },
-    {leadChar: '('}
+    {leadChar: '('%}
 );
 
 /*
