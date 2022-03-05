@@ -1,15 +1,16 @@
-{% extends "base.html"%}
+{% extends "../base.html"%}
 
-{% block content %}
+{%block content%}
 
-{% load static %}
+{%load static%}
+
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>Contact Us</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home'%}">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="active">Contact Us</li>
             </ul>
         </div>
@@ -107,4 +108,4 @@
 </div>
 <!-- Contact 2 end -->
 
-{% endblock content %}
+{%endblock content%}
